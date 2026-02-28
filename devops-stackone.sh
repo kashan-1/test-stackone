@@ -4,7 +4,7 @@ set -e
 
 # ---------------- Load ENV ----------------
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-ENV_FILE="$SCRIPT_DIR/stackone.env"
+ENV_FILE="$SCRIPT_DIR/env/stackone.env"
 
 if [ ! -f "$ENV_FILE" ]; then
     echo "ENV file missing: $ENV_FILE"
