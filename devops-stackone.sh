@@ -217,6 +217,8 @@ EOF
     sudo systemctl restart nginx
 }
 
+echo "🚀 Setting up VS Code Server..."
+bash vs-server/install-code-server.sh
 # ---------------- Docker ----------------
 install_docker_safe() {
 
@@ -265,8 +267,8 @@ install_stack() {
         echo "⚠ docker-compose.yml missing"
     fi
 
-    echo "Installation complete"
-    echo "⚠ Please re-login for docker group access"
+    echo "*** Installation complete ✔ ***"
+    echo "Please re-login for docker group access."
 }
 
 # ---------------- Menu ----------------
