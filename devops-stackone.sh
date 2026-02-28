@@ -211,14 +211,15 @@ EOF
         sudo ln -sf "$CONFIG_FILE" "/etc/nginx/sites-enabled/$host"
         sudo cp "$CONFIG_FILE" "$NGINX_BACKUP_DIR/"
     done
-
+    echo "==> Setting up VS Code Server..."
+    bash vs-server/install-code-server.sh
     sudo nginx -t
     sudo systemctl enable nginx
     sudo systemctl restart nginx
+
 }
 
-echo "🚀 Setting up VS Code Server..."
-bash vs-server/install-code-server.sh
+
 # ---------------- Docker ----------------
 install_docker_safe() {
 
